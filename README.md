@@ -1,12 +1,6 @@
 # in-class-activities
 ## Devlogs
 ### W1
-Write your W1 activity Devlog here.
 
-### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
-
-## Open-Source Assets
-### W1
-- Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
-- Low-poly environment: https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153 
+1. When moving Camera outside the Cat GameObject, the camera stays fixed in the position it was last placed in the engine. Pressing the arrow keys still moves the cat, but the camera no longer follows the Cat GameObject and does not respond to player input.
+2. https://ejsal.itch.io/w1-in-class-activity
