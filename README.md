@@ -23,3 +23,8 @@ Activity #2
 
 Activity #3
 1. I think the balls get extremely bright when bouncing too many times due to using the x and y velocity of the ball as arguments within the Absolute Value method. And since the value of the balls' velocity is multiplied by the speed multiplier every time the balls collide with the walls/ground, the GetColorMultiplier method's arguments change as a result of those calculations, and depending on how high or low the average of the two values end up in relation to _speedThreshold, the ball's RBG values are multiplied by either 1.5 or 1. And, finally, RBG values cannot go beyond 0 and 1.0, so if the product of the existing RGB values and either 1.5 or 1.0 end up being greater than 1.0, it automatically rounds down back to 1.0, making the balls become white the longer they collide with the environment. 
+
+### W4
+Table #13
+1. We settled on Cat and SoccerBall having collisions and Rigidbodies, and Goal having only a collision with IsTrigger set to true. This is because the goal is a fixed object and doesn't need to move around in the game, but still needs to be passed through by the ball and the cat.
+2. I ran into a couple errors during step 6, in which I messed around with how to get the timer to actually work as intended. I tried to declare deltaTime as its own member variable because I forgot that it already existed within the Time class, and that I also didn't need to create the Time class since it already existed in-engine. I mainly thought this way due to Minigame3 requiring us to work within the Timer class, and I mistakenly assumed that I would need to do that again. I got it to work with help from the LAs!
