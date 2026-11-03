@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CatW5 : MonoBehaviour
 {
@@ -48,6 +49,28 @@ public class CatW5 : MonoBehaviour
 
 
         // STEP 1 & 2 ---------------------------------------------------------
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            translation = Vector3.forward;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            translation = Vector3.back;
+        }
+
+        if (_flipWSControls == true)
+        {
+            translation *= -1;
+        }
+        
+        transform.Translate(translation * _moveSpeed * Time.deltaTime);
+
+
+        
+
+
+
 
         float rotation = Input.GetAxis("Horizontal") * _turnSpeed * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
