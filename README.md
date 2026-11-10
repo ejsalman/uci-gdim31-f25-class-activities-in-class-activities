@@ -32,3 +32,8 @@ Table #13
 ### W5
 Notes:
 The DeerW5 class needs the member variable Target, which allows the player to set the initial desination that the deer goes towards. It also needs move speed, turn speed, and an animator to allow for it to move at fixed speeds and no appear stiff in the game. The class also needs the Start() method so that it knows to move to that target once the game begins.
+
+### W7
+Activity #1: Class resource guide: we all equally contributed to the categories since we only had 3 people at our table. https://docs.google.com/document/d/1DUb0ZVZJBBIqPJSFtK6_nH29tdpE0G2-kc8Innu8HuY/edit?usp=sharing 
+
+Activity #2: The class needs a _speed member variable, and it needs 4 methods. The stopChase method to stop chasing the player, the startChase method to start chasing the player, and the Update() method to check if the player is within the bats' chasing range.
