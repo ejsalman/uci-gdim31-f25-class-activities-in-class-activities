@@ -83,6 +83,7 @@ public class BatManager : MonoBehaviour
             }
             else if (_distance <= _interactDistance)
             {
+                //Debug.Log("bats are within chasing distance!");
                 _bats[i].startChasingPlayer(_playerTransform);
             }
             else
@@ -113,7 +114,7 @@ public class BatManager : MonoBehaviour
         //
         // The first argument to SpawnReactionUI is same bat in the parameters
         //      of CreateReactions.
-        SpawnReactionUI(bat, _messages[Random.Range(0, 9)]);
+        SpawnReactionUI(bat, _messages[Random.Range(0, 3)]);
         
         // STEP 5 -------------------------------------------------------------
     }

@@ -6,10 +6,11 @@ using UnityEngine.UIElements;
 public class BatW6 : MonoBehaviour
 {
     [SerializeField] private float _speed = 1.0f;
-    private Transform _playerTransform;
+    [SerializeField] private Transform _playerTransform;
 
     public void startChasingPlayer(Transform player)
     {
+        //Debug.Log("start chasing the player!");
         enabled = true;
         _playerTransform = player;
     }
