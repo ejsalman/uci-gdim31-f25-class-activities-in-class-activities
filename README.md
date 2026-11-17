@@ -29,7 +29,7 @@ Table #13
 1. We settled on Cat and SoccerBall having collisions and Rigidbodies, and Goal having only a collision with IsTrigger set to true. This is because the goal is a fixed object and doesn't need to move around in the game, but still needs to be passed through by the ball and the cat.
 2. I ran into a couple errors during step 6, in which I messed around with how to get the timer to actually work as intended. I tried to declare deltaTime as its own member variable because I forgot that it already existed within the Time class, and that I also didn't need to create the Time class since it already existed in-engine. I mainly thought this way due to Minigame3 requiring us to work within the Timer class, and I mistakenly assumed that I would need to do that again. I got it to work with help from the LAs!
 
-### W5
+### W6
 Notes:
 The DeerW5 class needs the member variable Target, which allows the player to set the initial desination that the deer goes towards. It also needs move speed, turn speed, and an animator to allow for it to move at fixed speeds and no appear stiff in the game. The class also needs the Start() method so that it knows to move to that target once the game begins.
 
@@ -37,3 +37,6 @@ The DeerW5 class needs the member variable Target, which allows the player to se
 Activity #1: Class resource guide: we all equally contributed to the categories since we only had 3 people at our table. https://docs.google.com/document/d/1DUb0ZVZJBBIqPJSFtK6_nH29tdpE0G2-kc8Innu8HuY/edit?usp=sharing 
 
 Activity #2: The class needs a _speed member variable, and it needs 4 methods. The stopChase method to stop chasing the player, the startChase method to start chasing the player, and the Update() method to check if the player is within the bats' chasing range.
+
+### W8
+The code in Step 2 was wrong because it was using transform.position meaning that the world space was being modified with the new assignment. It needed to be changed to transform.Translate because Translate is a method which handles changing the direction and distance of the game object, not the world space as a whole. 
